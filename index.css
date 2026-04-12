@@ -6,43 +6,45 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body styling */
+/* Background */
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-/* Container (card box) */
-.container {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Card Container */
+body > * {
+  max-width: 350px;
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 320px;
 }
 
 /* Heading */
-.container h1 {
-  margin-bottom: 10px;
+h1 {
+  margin-bottom: 15px;
   color: #333;
 }
 
-/* Paragraph */
-.container p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
+/* Label */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
 }
 
-/* Inputs */
+/* Input */
 input {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
+  margin-bottom: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
@@ -52,19 +54,19 @@ input {
 
 input:focus {
   border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
 }
 
 /* Button */
 button {
   width: 100%;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 12px;
   background: #667eea;
   color: white;
   border: none;
   border-radius: 8px;
+  font-size: 15px;
   cursor: pointer;
-  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -72,8 +74,15 @@ button:hover {
   background: #5a67d8;
 }
 
-/* Result */
-#result {
+/* Results */
+h2 {
   margin-top: 20px;
   color: #333;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
 }
