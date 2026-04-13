@@ -1,30 +1,22 @@
-const age = document.getElementById("age");
-const check = document.getElementById("checkbtn");
-let res = document.getElementById("result");
+const appContainer = document.getElementById("app");
+const generateBtn = document.getElementById("generateBtn");
 
-check.addEventListener("click", function () {
-  const userAge = Number(age.value);
+function createProfileCard() {
+  const profileCard = document.createElement("div");
+  profileCard.className = "profile-card";
 
-  if (isNaN(userAge)) {
-    res.innerHTML = "⚠️ Please enter a valid age";
-    return;
-  }
+  const profileImage = document.createElement("img");
+  profileImage.src = "https://i.pravatar.cc/150?img=" + Math.floor(Math.random() * 70);
 
-  if (userAge >= 18) {
-    res.innerHTML = `
-      ✅ You can drive <br>
-      🗳️ You can vote <br>
-      🍺 You can legally drink (in some countries) <br>
-      💼 You are eligible for jobs <br>
-      🪪 You can apply for driving license
-    `;
-  } else {
-    res.innerHTML = `
-      ❌ You cannot drive <br>
-      ❌ You cannot vote <br>
-      📚 Focus on studies <br>
-      🎮 Enjoy your teenage life <br>
-      ⏳ Wait till you turn 18
-    `;
-  }
-});
+  const profileDescription = document.createElement("p");
+  profileDescription.textContent =
+    "A passionate Web Developer with experience in JavaScript and React.";
+
+  profileCard.appendChild(profileImage);
+  profileCard.appendChild(profileDescription);
+
+  appContainer.appendChild(profileCard);
+}
+
+// Button click pe card banega
+generateBtn.addEventListener("click", createProfileCard);
