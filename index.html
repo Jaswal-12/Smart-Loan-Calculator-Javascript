@@ -3,17 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card Generator</title>
+  <title>Smart Loan Calculator</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
-  <h1>Profile Card Generator</h1>
+  <h1>Smart Loan Calculator</h1>
+  <p style="text-align:center;">Calculate your monthly payments and total interest easily</p>
 
-  <div id="app"></div>
+  <div class="container">
 
-  <button id="generateBtn">Generate Profile Card</button>
+    <!-- INPUT SECTION -->
+    <div class="loan">
+      <label>Loan Amount</label>
+      <input type="number" id="l1" placeholder="e.g. 250000"/>
 
-  <script src="script.js"></script>
+      <label>Annual Interest (%)</label>
+      <input type="number" id="l2" placeholder="e.g. 5.5">
+
+      <label>Loan Term (Years)</label>
+      <input type="number" id="l3" placeholder="e.g. 30">
+
+      <button id="btn1">Calculate Loan</button>
+    </div>
+
+    <!-- OUTPUT SECTION -->
+    <div class="loan-summary">
+      <h2>Loan Summary</h2>
+
+      <h3 id="m1">Monthly Payment: $0.00</h3>
+      <h3 id="m2">Total Payment: $0.00</h3>
+      <h3 id="m3">Total Interest: $0.00</h3>
+    </div>
+
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
